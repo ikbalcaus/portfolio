@@ -13,8 +13,8 @@ body {
   background-color: var(--background);
   color: var(--text);
 }
-.links {
-  width: 934px;
+.sections-list {
+  width: 1048px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -24,10 +24,10 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: center;
   gap: 4px 20px;
 }
-.links a {
+.sections-list a {
   text-decoration: none;
   color: var(--text);
   user-select: none;
@@ -74,12 +74,30 @@ body {
 .title {
   font-size: 1.5em;
 }
+.link {
+  word-break: break-word;
+}
 .footer {
   text-align: center;
 }
+@media (max-width: 1062px) {
+  .sections-list {
+    width: 934px;
+    justify-content: end;
+  }
+}
 @media (max-width: 950px) {
-  .links, .main {
+  .main {
     width: 100%;
     border-width: 1px 0;
+  }
+  .sections-list {
+    width: 100%;
+  }
+  .banner-image {
+    height: 254px;
+  }
+  .profile-image {
+    width: 310px;
   }
 }

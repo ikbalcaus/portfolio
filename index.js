@@ -64,9 +64,20 @@ function fetchData() {
       listItem.innerHTML = `
         <p>${x.name}</p>
         <p>${x.description}</p>
-        <p><a href="${x.link}" target="_blank">${x.link}</a></p>
+        <p><a href="${x.link}" class="link" target="_blank">${x.link}</a></p>
       `;
       projectsList.appendChild(listItem);
+    });
+
+    const licensesCertificationsList = document.getElementById("licenses-certifications-list");
+    data.licensesCertifications.forEach(x => {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `
+        <p>${x.name}</p>
+        <p>${x.organization}</p>
+        <p><a href="${x.link}" class="link" target="_blank">${x.link}</a></p>
+      `;
+      licensesCertificationsList.appendChild(listItem);
     });
 
     const languagesList = document.getElementById("languages-list");
@@ -78,14 +89,14 @@ function fetchData() {
 
     const contactList = document.getElementById("contact-list");
     contactList.innerHTML = `
-      <li><p>Email: <a href="mailto:${data.contact.email}" target="_blank">${data.contact.email}</a></p></li>
+      <li><p>Email: <a href="mailto:${data.contact.email}" class="link" target="_blank">${data.contact.email}</a></p></li>
       <li><p>Location: ${data.contact.location}</p></li>
     `;
 
     const linksList = document.getElementById("links-list");
     linksList.innerHTML = `
-      <li><p>Linkedin: <a href="${data.links.linkedin}" target="_blank">${data.links.linkedin}</a></p></li>
-      <li><p>Github: <a href="${data.links.github}" target="_blank">${data.links.github}</a></p></li>
+      <li><p>Linkedin: <a href="${data.links.linkedin}" class="link" target="_blank">${data.links.linkedin}</a></p></li>
+      <li><p>Github: <a href="${data.links.github}" class="link" target="_blank">${data.links.github}</a></p></li>
     `;
   });
 }
