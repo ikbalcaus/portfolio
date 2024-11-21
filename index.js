@@ -22,7 +22,7 @@ function fetchData() {
     document.getElementById("description").innerHTML = data.about.description;
     document.getElementById("about-me").innerHTML = data.about.aboutMe;
 
-    const workExperienceList = document.getElementById("work-experience-list");
+    const workExperienceList = document.getElementById("work-experience");
     data.workExperience.forEach(x => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `
@@ -33,7 +33,7 @@ function fetchData() {
       workExperienceList.appendChild(listItem);
     });
 
-    const educationList = document.getElementById("education-list");
+    const educationList = document.getElementById("education");
     data.education.forEach(x => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `
@@ -44,21 +44,21 @@ function fetchData() {
       educationList.appendChild(listItem);
     });
 
-    const toolsList = document.getElementById("favorite-tools-list");
+    const toolsList = document.getElementById("favorite-tools");
     data.favoriteTools.forEach(x => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `<p>${x}</p>`;
       toolsList.appendChild(listItem);
     });
 
-    const skillsList = document.getElementById("skills-list");
+    const skillsList = document.getElementById("skills");
     data.skills.forEach(x => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `<p>${x}</p>`;
       skillsList.appendChild(listItem);
     });
 
-    const projectsList = document.getElementById("projects-list");
+    const projectsList = document.getElementById("projects");
     data.projects.forEach(x => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `
@@ -69,7 +69,7 @@ function fetchData() {
       projectsList.appendChild(listItem);
     });
 
-    const licensesCertificationsList = document.getElementById("licenses-certifications-list");
+    const licensesCertificationsList = document.getElementById("licenses-certifications");
     data.licensesCertifications.forEach(x => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `
@@ -80,20 +80,20 @@ function fetchData() {
       licensesCertificationsList.appendChild(listItem);
     });
 
-    const languagesList = document.getElementById("languages-list");
+    const languagesList = document.getElementById("languages");
     data.languages.forEach(x => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `<p>${x}</p>`;
       languagesList.appendChild(listItem);
     });
 
-    const contactList = document.getElementById("contact-list");
+    const contactList = document.getElementById("contact");
     contactList.innerHTML = `
       <li><p>Email: <a href="mailto:${data.contact.email}" class="link" target="_blank">${data.contact.email}</a></p></li>
       <li><p>Location: ${data.contact.location}</p></li>
     `;
 
-    const linksList = document.getElementById("links-list");
+    const linksList = document.getElementById("links");
     linksList.innerHTML = `
       <li><p>Linkedin: <a href="${data.links.linkedin}" class="link" target="_blank">${data.links.linkedin}</a></p></li>
       <li><p>Github: <a href="${data.links.github}" class="link" target="_blank">${data.links.github}</a></p></li>
