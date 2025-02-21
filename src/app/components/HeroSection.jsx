@@ -46,10 +46,10 @@ export default function() {
             </Link>
             <a
               href="Ikbal Čaušević - CV.pdf"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 text-white mt-3 scale-y-105"
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 text-white mt-3 scale-y-105 glowing-button-parent"
               download
             >
-              <span className="block bg-[#121212] rounded-full px-6 py-2 glow-button" download>
+              <span className="block bg-[#121212] rounded-full px-6 py-2 glowing-button">
                 Download CV
               </span>
             </a>

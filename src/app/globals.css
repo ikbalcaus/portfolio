@@ -28,7 +28,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.glow-button:hover {
+.glowing-button-parent:hover .glowing-button, .glowing-button:hover {
   box-shadow:
     0px 0px 20px 2px rgba(191, 81, 219, 0.5),
     inset 0px 0px 20px 2px rgba(191, 81, 219, 0.4);

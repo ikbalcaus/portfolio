@@ -34,14 +34,14 @@ export default function() {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border border-violet-400 rounded text-violet-300 glow-button"
+              className="flex items-center px-3 py-2 border border-violet-400 rounded text-violet-300 glowing-button"
             >
               <Bars3Icon className="h-5 w-5 scale-125" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border border-violet-400 rounded text-violet-300 glow-button"
+              className="flex items-center px-3 py-2 border border-violet-400 rounded text-violet-300 glowing-button"
             >
               <XMarkIcon className="h-5 w-5 scale-125" />
             </button>
