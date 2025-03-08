@@ -9,6 +9,7 @@ const tabData = [
     id: "experience",
     content: (
       <ul className="list-disc pl-2">
+        <li>Freelancing</li>
         <li>QSD.BA Internship</li>
       </ul>
     ),
