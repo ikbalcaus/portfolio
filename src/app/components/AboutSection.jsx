@@ -29,9 +29,7 @@ const tabData = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>
-          <p>Foundational C# with Microsoft</p>
-        </li>
+        <li>Foundational C# with Microsoft</li>
       </ul>
     ),
   },
