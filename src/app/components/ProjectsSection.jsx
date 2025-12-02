@@ -6,27 +6,30 @@ import { motion } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "MyNotes",
-    description: "Simple web application built with Vue.js for taking notes",
+    title: "WebCentar",
+    description:
+      "Web Design agency website built with WordPress and Elementor plugin",
     image: "/images/projects/1.png",
-    url: "https://github.com/ikbalcaus/MyNotes",
-    type: "Web"
+    url: "https://webcentar.ba",
+    type: "Web",
   },
   {
     id: 2,
-    title: "HandSketch",
-    description: "Drawing on Canvas with Hand Gestures + AI for Letter Recognition",
+    title: "E-Books",
+    description:
+      "Mobile application for publishing and reading books built with C# .NET and Flutter",
     image: "/images/projects/2.png",
-    url: "https://github.com/ikbalcaus/HandSketch",
-    type: "Desktop"
+    url: "https://github.com/ikbalcaus/e-books",
+    type: "Mobile",
   },
   {
     id: 3,
-    title: "BlitzQuiz",
-    description: "Quiz game built with React.js and Express.js",
+    title: "HandSketch",
+    description:
+      "Drawing on Canvas with Hand Gestures + AI for Letter Recognition",
     image: "/images/projects/3.png",
-    url: "https://github.com/ikbalcaus/BlitzQuiz",
-    type: "Web"
+    url: "https://github.com/ikbalcaus/HandSketch",
+    type: "Desktop",
   },
   {
     id: 4,
@@ -34,24 +37,24 @@ const projectsData = [
     description: "Medical application built with C# .NET and Angular",
     image: "/images/projects/4.png",
     url: "https://github.com/ikbalcaus/BaseCure",
-    type: "Web"
+    type: "Web",
   },
   {
     id: 5,
-    title: "QSD Web Shop",
-    description: "Application built during QSD2024 internship",
+    title: "Client's Websites",
+    description: "Custom websites built for clients with WordPress",
     image: "/images/projects/5.png",
-    url: "https://github.com/ikbalcaus/qsdshop-client",
-    type: "Web"
-  }
+    url: "https://webcentar.ba/projekti",
+    type: "Web",
+  },
 ];
 
-export default function() {
+export default function () {
   const [selectedType, setSelectedType] = useState("All");
 
   return (
-    <section id="projects" className="mt-16 mx-2">
-      <h2 className="text-center text-4xl font-bold text-white mb-4 xl:mb-8">
+    <section id="projects" className="pt-16 xl:pt-20">
+      <h2 className="text-center text-4xl font-bold text-white mb-4 xl:mb-6">
         My Projects
       </h2>
       <div className="flex flex-col px-8 sm:px-0 sm:flex-row justify-center mb-6 xl:mb-8 sm:gap-4">
@@ -89,27 +92,27 @@ export default function() {
         </button>
       </div>
       <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-      {projectsData.map((project, index) => 
-        (selectedType === "All" || project.type === selectedType) ? (
-          <motion.li
-            key={`${index}-${selectedType}`}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.url}
-            />
-          </motion.li>
+        {projectsData.map((project, index) =>
+          selectedType === "All" || project.type === selectedType ? (
+            <motion.li
+              key={`${index}-${selectedType}`}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.url}
+              />
+            </motion.li>
           ) : null
         )}
       </ul>
     </section>
   );
-};
+}

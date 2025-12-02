@@ -4,9 +4,9 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function() {
+export default function () {
   return (
-    <section className="md:pt-12 pb-6 xl:pt-24 xl:pb-32 2xl:pt-40 2xl:pb-48">
+    <section className="sm:pt-4 md:pt-16 lg:pb-12 xl:pb-20 2xl:pt-40 2xl:h-[calc(100vh-100px)] 2xl:min-h-[750px]">
       <div className="grid grid-cols-1 md:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -18,7 +18,7 @@ export default function() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
               sequence={[
                 "Ikbal Čaušević",
@@ -26,7 +26,7 @@ export default function() {
                 "Web Developer",
                 5000,
                 "Mobile Developer",
-                5000
+                5000,
               ]}
               wrapper="span"
               className="[text-shadow:_0_0_2px_rgb(255_255_255_/_0.8)]"
@@ -35,7 +35,8 @@ export default function() {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Student at Faculty of Information Technologies | University "Džemal Bijedić" in Mostar
+            Student at Faculty of Information Technologies | University "Džemal
+            Bijedić" in Mostar
           </p>
           <div>
             <Link
@@ -59,14 +60,14 @@ export default function() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center md:mt-4 lg:mt-0"
+          className="col-span-4 place-self-center 2xl:place-self-end md:mt-4 lg:mt-0"
         >
           <Image
             src="/images/hero-image.png"
             alt="hero image"
             className="relative scale-75 md:scale-100 xl:scale-90 2xl:scale-100 2xl:mb-2"
             style={{
-              borderRadius: "10px 40px 0px 20px"
+              borderRadius: "10px 40px 0px 20px",
             }}
             width={410}
             height={410}
@@ -75,4 +76,4 @@ export default function() {
       </div>
     </section>
   );
-};
+}

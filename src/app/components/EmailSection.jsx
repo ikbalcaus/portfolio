@@ -3,9 +3,9 @@ import GithubIcon from "../../../public/icons/github-icon.svg";
 import LinkedinIcon from "../../../public/icons/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
-import { ToastContainer, toast, Bounce } from 'react-toastify';
+import { ToastContainer, toast, Bounce } from "react-toastify";
 
-export default function() {
+export default function () {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -15,7 +15,6 @@ export default function() {
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
-
     const options = {
       method: "POST",
       headers: {
@@ -23,17 +22,13 @@ export default function() {
       },
       body: JSONdata,
     };
-
     e.target.reset();
-
     try {
       const response = await fetch(endpoint, options);
       const resData = await response.json();
-  
       if (response.status === 200) toast.success("Email sent successfully");
       else toast.error("An error occurred");
-    }
-    catch (error) {
+    } catch (error) {
       toast.error("An error occurred");
     }
   };
@@ -41,7 +36,7 @@ export default function() {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 xl:mt-10 md:mb:12 xl:mb-24 py-24 -mx-2 gap-4"
+      className="grid md:grid-cols-2 md:mb:12 xl:mt-10 xl:mb-20 2xl:mb-24 py-20 xl:py-24 gap-4"
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 blur-lg absolute hidden md:block mt-60 xl:mt-72 left-20"></div>
       <div>
@@ -58,7 +53,7 @@ export default function() {
           <Link href="https://github.com/ikbalcaus">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="https://www.linkedin.com/in/ikbalcaus/">
+          <Link href="https://www.linkedin.com/in/ikbalcaus">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -142,4 +137,4 @@ export default function() {
       />
     </section>
   );
-};
+}

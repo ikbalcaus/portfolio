@@ -5,7 +5,7 @@ const variants = {
   active: { width: "calc(100% - 0.75rem)" },
 };
 
-export default function({ active, selectTab, children }) {
+export default function ({ active, selectTab, children }) {
   const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
 
   return (
@@ -20,4 +20,4 @@ export default function({ active, selectTab, children }) {
       ></motion.div>
     </button>
   );
-};
+}

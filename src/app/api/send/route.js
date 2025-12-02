@@ -8,14 +8,12 @@ const toEmail = process.env.TO_EMAIL;
 export async function POST(req) {
   try {
     const { email, subject, message } = await req.json();
-
     if (!email || !subject || !message) {
       return NextResponse.json(
         { error: "Email, subject, and message are required." },
         { status: 400 }
       );
     }
-
     const data = await resend.emails.send({
       from: fromEmail,
       to: [toEmail],
@@ -27,7 +25,6 @@ export async function POST(req) {
         </>
       )
     });
-
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json(

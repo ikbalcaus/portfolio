@@ -1,4 +1,4 @@
-import { ToastContainer, Bounce } from "react-toastify"
+import { ToastContainer, Bounce } from "react-toastify";
 
 export default function Toast() {
   return (
@@ -16,8 +16,8 @@ export default function Toast() {
       transition={Bounce}
       style={{
         cursor: "pointer",
-        fontWeight: "600"
+        fontWeight: "600",
       }}
     />
-  )
+  );
 }

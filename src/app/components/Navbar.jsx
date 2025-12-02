@@ -18,7 +18,7 @@ const navLinks = [
   },
 ];
 
-export default function() {
+export default function () {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
@@ -62,21 +62,21 @@ export default function() {
           </ul>
         </div>
       </div>
-      {navbarOpen ?
-      <ul className="flex flex-col pb-3 items-center">
-        {navLinks.map((link, index) => (
-          <li key={index}>
-            <Link
-              href={link.path}
-              className="block py-2 sm:text-xl rounded sm:p-0 hover:text-white"
-              onClick={() => setNavbarOpen(false)}
-            >
-              {link.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      : null}
+      {navbarOpen ? (
+        <ul className="flex flex-col pb-3 items-center">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                href={link.path}
+                className="block py-2 sm:text-xl rounded sm:p-0 hover:text-white"
+                onClick={() => setNavbarOpen(false)}
+              >
+                {link.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </nav>
   );
-};
+}
