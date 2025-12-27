@@ -11,6 +11,7 @@ const tabData = [
       <ul className="list-disc pl-2">
         <li>Self-Employed Web Designer & Developer</li>
         <li>Quality Assurance Intership at Zira Group</li>
+        <li>Frontend Developer Intership at QSD.BA</li>
       </ul>
     ),
   },

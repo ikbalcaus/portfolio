@@ -8,7 +8,7 @@ const projectsData = [
     id: 1,
     title: "WebCentar",
     description:
-      "Web Design agency website built with WordPress and Elementor plugin",
+      "Web design agency website built with WordPress and Elementor plugin",
     image: "/images/projects/1.png",
     url: "https://webcentar.ba",
     type: "Web",
@@ -24,26 +24,35 @@ const projectsData = [
   },
   {
     id: 3,
+    title: "QSD2024 Web Shop",
+    description:
+      "E-commerce web shop for selling clothes (PHP Laravel, React.js, MySQL)",
+    image: "/images/projects/3.png",
+    url: "https://github.com/ikbalcaus/qsd-webshop-client",
+    type: "Web",
+  },
+  {
+    id: 4,
     title: "HandSketch",
     description:
       "Drawing on Canvas with Hand Gestures + AI for Letter Recognition",
-    image: "/images/projects/3.png",
+    image: "/images/projects/4.png",
     url: "https://github.com/ikbalcaus/HandSketch",
     type: "Desktop",
   },
   {
-    id: 4,
+    id: 5,
     title: "BaseCure",
     description: "Medical application built with C# .NET and Angular",
-    image: "/images/projects/4.png",
+    image: "/images/projects/5.png",
     url: "https://github.com/ikbalcaus/BaseCure",
     type: "Web",
   },
   {
-    id: 5,
+    id: 6,
     title: "Client's Websites",
     description: "Custom websites built for clients with WordPress",
-    image: "/images/projects/5.png",
+    image: "/images/projects/6.png",
     url: "https://webcentar.ba/projekti",
     type: "Web",
   },
@@ -60,33 +69,29 @@ export default function () {
       <div className="flex flex-col px-8 sm:px-0 sm:flex-row justify-center mb-6 xl:mb-8 sm:gap-4">
         <button
           onClick={() => setSelectedType("All")}
-          className={`px-6 py-3 bg-transparent border border-b-2 border-t-transparent border-l-transparent border-r-transparent ${
-            selectedType === "All" ? "border-violet-500" : ""
-          }`}
+          className={`px-6 py-3 bg-transparent border border-b-2 border-t-transparent border-l-transparent border-r-transparent ${selectedType === "All" ? "border-violet-500" : ""
+            }`}
         >
           All
         </button>
         <button
           onClick={() => setSelectedType("Web")}
-          className={`px-6 py-3 bg-transparent border border-b-2 border-t-transparent border-l-transparent border-r-transparent ${
-            selectedType === "Web" ? "border-violet-500" : ""
-          }`}
+          className={`px-6 py-3 bg-transparent border border-b-2 border-t-transparent border-l-transparent border-r-transparent ${selectedType === "Web" ? "border-violet-500" : ""
+            }`}
         >
           Web
         </button>
         <button
           onClick={() => setSelectedType("Desktop")}
-          className={`px-6 py-3 bg-transparent border border-b-2 border-t-transparent border-l-transparent border-r-transparent ${
-            selectedType === "Desktop" ? "border-violet-500" : ""
-          }`}
+          className={`px-6 py-3 bg-transparent border border-b-2 border-t-transparent border-l-transparent border-r-transparent ${selectedType === "Desktop" ? "border-violet-500" : ""
+            }`}
         >
           Desktop
         </button>
         <button
           onClick={() => setSelectedType("Mobile")}
-          className={`px-6 py-3 bg-transparent border border-b-2 border-t-transparent border-l-transparent border-r-transparent ${
-            selectedType === "Mobile" ? "border-violet-500" : ""
-          }`}
+          className={`px-6 py-3 bg-transparent border border-b-2 border-t-transparent border-l-transparent border-r-transparent ${selectedType === "Mobile" ? "border-violet-500" : ""
+            }`}
         >
           Mobile
         </button>
